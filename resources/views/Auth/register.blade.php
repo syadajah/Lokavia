@@ -83,9 +83,7 @@
         </div>
     @endif
 
-    {{-- CARD FORM KAMU DI SINI --}}
-
-
+    {{-- CARD FORM --}}
 
     <div
         class="w-full max-w-md bg-white/90 shadow-xl backdrop-blur-xl rounded-2xl p-8 animate-fadeIn border-blue-400 border-2">

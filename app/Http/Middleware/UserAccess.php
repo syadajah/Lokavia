@@ -23,6 +23,8 @@ class UserAccess
                 return redirect()->route('admin.dashboard');
             }else if($user->role == 'user'){
                 return redirect()->route('user.dashboard');
+            }else if($user->role == 'owner'){
+                return redirect()->route('owner.dashboard');
             }
         return redirect()->route('login');
         }

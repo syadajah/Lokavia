@@ -26,10 +26,10 @@ class UserSeeder extends Seeder
 
         // User
         DB::table('users')->insert([
-            'username' => 'user',
-            'email' => 'user@example.com',
-            'role' => 'user',
-            'password' => Hash::make('user123'),
+            'username' => 'owner',
+            'email' => 'owner@example.com',
+            'role' => 'owner',
+            'password' => Hash::make('owner123'),
             'created_at' => now(),
             'updated_at' => now(),
         ]);

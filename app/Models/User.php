@@ -20,9 +20,15 @@ class User extends Authenticatable
     protected $fillable = [
         'username',
         'email',
+        'foto',
         'password',
         'role',
     ];
+
+    public function rental()
+    {
+        return $this->hasMany(Rental::class, 'id_user');
+    }
 
     /**
      * The attributes that should be hidden for serialization.

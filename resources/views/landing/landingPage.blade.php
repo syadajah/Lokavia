@@ -118,7 +118,6 @@
                     <span>VOLVO</span>
                     <span>AUDI</span>
                     <span>ACURA</span>
-                    <span>DEDE</span>
                 </div>
             </section>
 

@@ -30,5 +30,10 @@ Route::middleware(['auth', 'role:user'])->group(function () {
     Route::get('/user/dashboard', [UserController::class, 'index'])->name('user.dashboard');
 });
 
+// ====================== OWNER ROLE SESSION ======================
+Route::middleware(['auth', 'role:owner'])->group(function () {
+    Route::get('/owner/dashboard', [UserController::class, 'index'])->name('owner.dashboard');
+});
+
 // ====================== LOGOUT SESSION ======================
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth')->name('logout');
