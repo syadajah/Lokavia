@@ -12,7 +12,7 @@
     <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
 </head>
 
-<body style="margin: 0; font-family: 'Poppins', sans-serif; background-color: #111827; color: white; display: flex;">
+<body style="margin: 0; font-family: 'Poppins', sans-serif; background-color: #111827; color: black; display: flex;">
     {{-- Sidebar --}}
     @include('layouts.sidebar')
 
@@ -23,7 +23,7 @@
         margin-left: 250px; /* jarak kiri menyesuaikan lebar sidebar */
         overflow-y: auto;
         min-height: 100vh;
-        background-color: #111827;
+        background-color: #f5f5f5;
     ">
         @yield('content')
     </main>

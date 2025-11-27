@@ -38,8 +38,8 @@
                 <div class="container mx-auto flex items-center justify-between py-4 px-4">
 
                     <div class="flex items-center gap-2">
-                        <span class="iconify text-3xl text-blue-600" data-icon="mdi:car"></span>
-                        <h1 class="text-2xl font-semibold text-blue-600">Lokavia</h1>
+                        <img src="{{ asset('images/Logo-Lokavia.png') }}" alt="Logo" style="width: 60px; height: auto;">
+                        <h2 style="font-size: 20px; font-weight: bold;">Lokavia</h2>
                     </div>
 
                     <div class="hidden md:flex gap-6 text-sm font-medium">

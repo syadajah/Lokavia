@@ -13,8 +13,8 @@
 ">
     {{-- Logo dan Nama Website --}}
     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 32px;">
-        <img src="{{ asset('images/logo.png') }}" alt="Logo" style="width: 60px; height: auto;">
-        <h2 style="font-size: 20px; font-weight: bold;">RakKata_</h2>
+        <img src="{{ asset('images/Logo-Lokavia.png') }}" alt="Logo" style="width: 60px; height: auto;">
+        <h2 style="font-size: 20px; font-weight: bold;">Lokavia</h2>
     </div>
 
     {{-- Menu Sidebar untuk Admin --}}
@@ -27,33 +27,33 @@
                 <span>Dashboard</span>
             </a>
 
-            <a href="{{ route('admin.books.index') }}"
+            <a href="{{ route('admin.kendaraan.index') }}"
                 style="display: flex; align-items: center; gap: 12px; padding: 8px; border-radius: 6px; text-decoration: none; color: white;"
                 onmouseover="this.style.backgroundColor='#1d4ed8'" onmouseout="this.style.backgroundColor=''">
-                <iconify-icon icon="mdi:book-multiple" width="32" height="32"></iconify-icon>
-                <span>Manajemen Buku</span>
+                <iconify-icon icon="mdi:car" width="32" height="32"></iconify-icon>
+                <span>Manajemen Kendaraan</span>
             </a>
 
-            <a href="{{ route('admin.categories.index') }}"
+            <a href="{{ route('admin.kategori.index') }}"
                 style="display: flex; align-items: center; gap: 12px; padding: 8px; border-radius: 6px; text-decoration: none; color: white;"
                 onmouseover="this.style.backgroundColor='#1d4ed8'" onmouseout="this.style.backgroundColor=''">
                 <iconify-icon icon="mdi:shape" width="32" height="32"></iconify-icon>
                 <span>Manajemen Kategori</span>
             </a>
 
-            <a href="{{ route('admin.details.index') }}"
+            {{-- <a href="{{ route('admin.details.index') }}"
                 style="display: flex; align-items: center; gap: 12px; padding: 8px; border-radius: 6px; text-decoration: none; color: white;"
                 onmouseover="this.style.backgroundColor='#1d4ed8'" onmouseout="this.style.backgroundColor=''">
                 <iconify-icon icon="mdi:currency-usd" width="32" height="32"></iconify-icon>
                 <span>Detail Buku</span>
-            </a>
+            </a> --}}
 
-            <a href="{{ route('admin.users.index') }}"
+            {{-- <a href="{{ route('admin.users.index') }}"
                 style="display: flex; align-items: center; gap: 12px; padding: 8px; border-radius: 6px; text-decoration: none; color: white;"
                 onmouseover="this.style.backgroundColor='#1d4ed8'" onmouseout="this.style.backgroundColor=''">
                 <iconify-icon icon="mdi:account-multiple" width="32" height="32"></iconify-icon>
                 <span>Manajemen User</span>
-            </a>
+            </a> --}}
         </nav>
     @endif
 
@@ -130,8 +130,8 @@
                     <span style="font-size: 13px; font-weight: 600;">Tips Cepat</span>
                 </div>
                 <ul style="font-size: 11px; line-height: 1.6; margin: 0; padding-left: 20px; opacity: 0.9;">
-                    <li>Cari buku dengan kata kunci</li>
-                    <li>Cek keranjang sebelum checkout</li>
+                    <li>Cari Kendaraan dengan kata kunci</li>
+                    <li>Cek pesanan sebelum pembayaran</li>
                     <li>Transaksi hari ini bisa diedit</li>
                 </ul>
             </div>
@@ -146,7 +146,7 @@
         <div style="display: flex; align-items: center; gap: 8px;">
             <iconify-icon icon="mdi:account-circle" width="40" height="40"></iconify-icon>
             <div>
-                <p style="font-size: 14px; font-weight: 600; margin: 0;">{{ Auth::user()->name ?? 'User' }}</p>
+                <p style="font-size: 14px; font-weight: 600; margin: 0;">{{ Auth::user()->username ?? 'User' }}</p>
                 <p style="font-size: 12px; opacity: 0.8; margin: 0; text-transform: capitalize;">
                     {{ Auth::user()->role ?? 'User' }}
                 </p>
