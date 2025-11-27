@@ -54,6 +54,27 @@
                 <iconify-icon icon="mdi:account-multiple" width="32" height="32"></iconify-icon>
                 <span>Manajemen User</span>
             </a>
+
+            {{-- <a href="{{ route('admin.users.index') }}"
+                style="display: flex; align-items: center; gap: 12px; padding: 8px; border-radius: 6px; text-decoration: none; color: white;"
+                onmouseover="this.style.backgroundColor='#1d4ed8'" onmouseout="this.style.backgroundColor=''">
+                <iconify-icon icon="mdi:account-multiple" width="32" height="32"></iconify-icon>
+                <span>Manajemen Sewa</span>
+            </a>
+
+            <a href="{{ route('admin.users.index') }}"
+                style="display: flex; align-items: center; gap: 12px; padding: 8px; border-radius: 6px; text-decoration: none; color: white;"
+                onmouseover="this.style.backgroundColor='#1d4ed8'" onmouseout="this.style.backgroundColor=''">
+                <iconify-icon icon="mdi:account-multiple" width="32" height="32"></iconify-icon>
+                <span>Pembayaran</span>
+            </a>
+
+            <a href="{{ route('admin.users.index') }}"
+                style="display: flex; align-items: center; gap: 12px; padding: 8px; border-radius: 6px; text-decoration: none; color: white;"
+                onmouseover="this.style.backgroundColor='#1d4ed8'" onmouseout="this.style.backgroundColor=''">
+                <iconify-icon icon="mdi:account-multiple" width="32" height="32"></iconify-icon>
+                <span>Laporan</span>
+            </a> --}}
         </nav>
     @endif
 
@@ -84,19 +105,19 @@
     @endif
 
     {{-- Menu Sidebar untuk Kasir --}}
-    @if (Auth::check() && Auth::user()->role === 'kasir')
+    @if (Auth::check() && Auth::user()->role === 'user')
         <nav style="display: flex; flex-direction: column; gap: 8px; flex: 1;">
             {{-- Dashboard / Katalog Buku --}}
-            <a href="{{ route('kasir.dashboard') }}"
+            <a href="{{ route('user.dashboard') }}"
                 style="display: flex; align-items: center; gap: 12px; padding: 10px; border-radius: 6px; text-decoration: none; color: white; {{ request()->routeIs('kasir.dashboard') ? 'background-color: #1d4ed8;' : '' }}"
                 onmouseover="this.style.backgroundColor='#1d4ed8'"
                 onmouseout="this.style.backgroundColor='{{ request()->routeIs('kasir.dashboard') ? '#1d4ed8' : 'transparent' }}'">
-                <iconify-icon icon="mdi:book-open-page-variant" width="24" height="24"></iconify-icon>
-                <span>Katalog Buku</span>
+                <iconify-icon icon="mdi:car" width="24" height="24"></iconify-icon>
+                <span>Katalog Kendaraan</span>
             </a>
 
             {{-- Keranjang --}}
-            <a href="{{ route('kasir.cart') }}"
+            {{-- <a href="{{ route('kasir.cart') }}"
                 style="display: flex; align-items: center; gap: 12px; padding: 10px; border-radius: 6px; text-decoration: none; color: white; position: relative; {{ request()->routeIs('kasir.cart') ? 'background-color: #1d4ed8;' : '' }}"
                 onmouseover="this.style.backgroundColor='#1d4ed8'"
                 onmouseout="this.style.backgroundColor='{{ request()->routeIs('kasir.cart') ? '#1d4ed8' : 'transparent' }}'">
@@ -108,16 +129,16 @@
                         {{ count(session('cart')) }}
                     </span>
                 @endif
-            </a>
+            </a> --}}
 
             {{-- Riwayat Transaksi --}}
-            <a href="{{ route('kasir.history') }}"
+            {{-- <a href="{{ route('kasir.history') }}"
                 style="display: flex; align-items: center; gap: 12px; padding: 10px; border-radius: 6px; text-decoration: none; color: white; {{ request()->routeIs('kasir.history') || request()->routeIs('kasir.transaction.*') ? 'background-color: #1d4ed8;' : '' }}"
                 onmouseover="this.style.backgroundColor='#1d4ed8'"
                 onmouseout="this.style.backgroundColor='{{ request()->routeIs('kasir.history') || request()->routeIs('kasir.transaction.*') ? '#1d4ed8' : 'transparent' }}'">
                 <iconify-icon icon="mdi:history" width="24" height="24"></iconify-icon>
                 <span>Riwayat Transaksi</span>
-            </a>
+            </a> --}}
 
             {{-- Divider --}}
             <hr style="border-color: rgba(255,255,255,0.2); margin: 8px 0;">

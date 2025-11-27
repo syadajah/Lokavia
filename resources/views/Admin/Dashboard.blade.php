@@ -286,7 +286,7 @@
                     </div>
                 </a>
 
-                <a href="#"
+                <a href="{{ route('admin.users.index') }}"
                     class="glass glass-hover p-4 rounded-xl flex items-center gap-4 text-gray-800 hover:text-blue-900 transition">
                     <div class="stat-icon bg-purple-600/60 text-white">
                         <iconify-icon icon="mdi:account-settings" width="28"></iconify-icon>
