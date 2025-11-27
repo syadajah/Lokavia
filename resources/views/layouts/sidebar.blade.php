@@ -41,19 +41,19 @@
                 <span>Manajemen Kategori</span>
             </a>
 
-            {{-- <a href="{{ route('admin.details.index') }}"
+            <a href="{{ route('admin.harga.index') }}"
                 style="display: flex; align-items: center; gap: 12px; padding: 8px; border-radius: 6px; text-decoration: none; color: white;"
                 onmouseover="this.style.backgroundColor='#1d4ed8'" onmouseout="this.style.backgroundColor=''">
                 <iconify-icon icon="mdi:currency-usd" width="32" height="32"></iconify-icon>
-                <span>Detail Buku</span>
-            </a> --}}
+                <span>Manajemen Harga</span>
+            </a>
 
-            {{-- <a href="{{ route('admin.users.index') }}"
+            <a href="{{ route('admin.users.index') }}"
                 style="display: flex; align-items: center; gap: 12px; padding: 8px; border-radius: 6px; text-decoration: none; color: white;"
                 onmouseover="this.style.backgroundColor='#1d4ed8'" onmouseout="this.style.backgroundColor=''">
                 <iconify-icon icon="mdi:account-multiple" width="32" height="32"></iconify-icon>
                 <span>Manajemen User</span>
-            </a> --}}
+            </a>
         </nav>
     @endif
 
